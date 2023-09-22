@@ -3,6 +3,7 @@
 sleep 10
 
 sed -i -e 's/listen =.*/listen = 9000/' /etc/php/7.4/fpm/pool.d/www.conf
+mkdir -p  /var/www/html/wordpress
 cd /var/www/html/wordpress
 
 wp core download --allow-root --path=/var/www/html/wordpress
