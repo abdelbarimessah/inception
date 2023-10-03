@@ -2,9 +2,9 @@ PATH_YML = ./srcs/docker-compose.yml
 # HOME_PATH = /home/mprigent/
 
 all:
-	@mkdir -p ~/amessah/data
-	@mkdir -p ~/amessah/data/wordpress
-	@mkdir -p ~/amessah/data/mariadb
+	@mkdir -p /home/kali/data
+	@mkdir -p /home/kali/data/wordpress
+	@mkdir -p /home/kali/data/mariadb
 	@sudo docker-compose -f $(PATH_YML) up -d --build
 
 re: clean all
