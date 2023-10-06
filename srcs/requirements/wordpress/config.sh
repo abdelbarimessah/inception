@@ -19,6 +19,19 @@ wp core install --url=$URL --title=$TITLE --admin_user=$ADMIN_USER --admin_passw
 
 wp user create $MY_USER $MY_EMAIL --role=editor --user_pass=$MY_PASS --allow-root 
 
+wp theme install zillah --activate --path=/var/www/html/wordpress --allow-root
+wp theme activate zillah --path=/var/www/html/wordpress --allow-root
+
+
+wp plugin install redis-cache --activate --path=/var/www/html/wordpress --allow-root
+
+wp config set WP_REDIS_HOST 'redis' --path=/var/www/html/wordpress --allow-root
+wp config set WP_REDIS_PORT '6379' --path=/var/www/html/wordpress --allow-root
+wp config set WP_REDIS_DATABASE '0' --path=/var/www/html/wordpress --allow-root
+wp config set WP_CACHE_KEY_SALT "$KEY_SALT" --path=/var/www/html/wordpress --allow-root
+
+wp redis enable --path=/var/www/html/wordpress --allow-root
+
 mkdir -p /run/php
 
 php-fpm7.4 -F
