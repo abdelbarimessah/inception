@@ -15,7 +15,7 @@ wp config set DB_USER $DB_USER --allow-root
 wp config set DB_PASSWORD $DB_PASSWORD --allow-root 
 wp config set DB_HOST $SQL_HOST --allow-root 
 
-wp core install --url=$URL --title=$MY_INCEPTION --admin_user=$ADMIN_USER --admin_password=$ADMIN_PASS --admin_email=$ADMIN_EMAIL --skip-email --allow-root 
+wp core install --url=$URL --title=$TITLE --admin_user=$ADMIN_USER --admin_password=$ADMIN_PASS --admin_email=$ADMIN_EMAIL --skip-email --allow-root 
 
 wp user create $MY_USER $MY_EMAIL --role=editor --user_pass=$MY_PASS --allow-root 
 

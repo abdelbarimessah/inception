@@ -1,7 +1,6 @@
 FROM debian:bullseye
 
-RUN apt-get -y update && apt-get -y upgrade && apt-get install -y mariadb-server mariadb-client
-
+RUN apt-get -y update && apt-get -y upgrade && apt-get install -y mariadb-server
 
 RUN mkdir -p /var/run/mysqld \
     && chown -R mysql:mysql /var/run/mysqld \
