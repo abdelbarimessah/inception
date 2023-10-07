@@ -5,10 +5,10 @@ all:
 	#@mkdir -p /home/kali/data
 	#@mkdir -p /home/kali/data/wordpress
 	#@mkdir -p /home/kali/data/mariadb
+	# @sudo docker-compose -f $(PATH_YML) up -d --build
 	@mkdir -p /Users/amessah/data
 	@mkdir -p /Users/amessah/data/wordpress
 	@mkdir -p /Users/amessah/data/mariadb
-	# @sudo docker-compose -f $(PATH_YML) up -d --build
 	@docker-compose -f $(PATH_YML) up -d --build
 
 re: clean all
