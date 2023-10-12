@@ -14,10 +14,6 @@ RUN chmod +x config.sh
 
 RUN mkdir -p /var/wwww/html/wordpress
 
-EXPOSE 9000
-
 ENTRYPOINT ["./config.sh"]
-
-# CMD [ "bash", "./config.sh" ]
 
 CMD ["/usr/sbin/php-fpm7.4", "-F"]

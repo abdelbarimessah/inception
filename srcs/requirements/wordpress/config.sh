@@ -19,9 +19,6 @@ wp core install --url=$URL --title=$TITLE --admin_user=$ADMIN_USER --admin_passw
 
 wp user create $MY_USER $MY_EMAIL --role=editor --user_pass=$MY_PASS --allow-root 
 
-wp theme install zillah --activate --allow-root
-wp theme activate zillah --allow-root
-
 mkdir -p /run/php
 
 php-fpm7.4 -F
