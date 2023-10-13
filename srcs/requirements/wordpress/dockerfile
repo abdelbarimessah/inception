@@ -16,4 +16,3 @@ RUN mkdir -p /var/wwww/html/wordpress
 
 ENTRYPOINT ["./config.sh"]
 
-CMD ["/usr/sbin/php-fpm7.4", "-F"]

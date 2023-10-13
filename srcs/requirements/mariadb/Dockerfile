@@ -12,7 +12,3 @@ RUN chmod +x /usr/local/bin/config.sh
 EXPOSE 3306
 
 CMD [ "/usr/local/bin/config.sh" ]
-    # && chown -R mysql:mysql /var/run/mysqld 
-# ENTRYPOINT [ "/usr/local/bin/config.sh" ]
-
-# CMD ["mysqld", "--bind-address=0.0.0.0"]
